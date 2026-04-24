@@ -2,23 +2,58 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>ONYX EXECUTIVE MIAMI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONYX EXECUTIVE MIAMI - VIP Transport</title>
     <style>
-        body { background-color: #000; color: #fff; font-family: sans-serif; text-align: center; margin: 0; padding: 20px; }
-        .container { max-width: 800px; margin: auto; }
-        h1 { letter-spacing: 5px; }
-        .price { font-size: 24px; color: #ffd700; }
-        img { width: 100%; border-radius: 15px; margin-top: 20px; border: 1px solid #333; }
-        .btn { display: inline-block; padding: 15px 30px; background: #fff; color: #000; text-decoration: none; border-radius: 5px; margin-top: 20px; font-weight: bold; }
+        body { background-color: #050505; color: #e0e0e0; font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        .header { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('car.jpg'); background-size: cover; background-position: center; height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-bottom: 2px solid #d4af37; }
+        .logo { font-size: 3rem; font-weight: bold; letter-spacing: 8px; color: #fff; margin: 0; text-transform: uppercase; }
+        .subtitle { font-size: 1.2rem; color: #d4af37; letter-spacing: 3px; margin-top: 10px; }
+        .content { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
+        .detail-item { background: #111; padding: 25px; border-radius: 10px; border: 1px solid #222; }
+        .detail-item h3 { color: #d4af37; margin-top: 0; }
+        .price-tag { font-size: 2.5rem; color: #fff; margin: 40px 0; font-weight: bold; }
+        .price-tag span { color: #d4af37; }
+        .cta-button { display: inline-block; background: #d4af37; color: #000; padding: 20px 45px; text-decoration: none; font-weight: bold; border-radius: 5px; text-transform: uppercase; transition: 0.3s; }
+        .cta-button:hover { background: #fff; }
+        footer { padding: 40px; text-align: center; font-size: 0.8rem; color: #666; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>ONYX | EXECUTIVE MIAMI</h1>
-        <p>RACE WEEKEND MAY 1–3, 2026</p>
-        <img src="car.jpg" alt="Onyx Car">
-        <p class="price">FULL WEEKEND $6,800</p>
-        <a href="https://wa.me/17862131103" class="btn">BOOK ON WHATSAPP</a>
+
+<div class="header">
+    <h1 class="logo">ONYX</h1>
+    <p class="subtitle">EXECUTIVE MIAMI | RACE WEEKEND 2026</p>
+</div>
+
+<div class="content">
+    <div style="text-align: center;">
+        <h2>PREMIUM CHAUFFEUR SERVICE</h2>
+        <p>Эксклюзивное транспортное сопровождение во время гоночного уикенда в Майами. Комфорт, безопасность и безупречный сервис.</p>
+        
+        <div class="details-grid">
+            <div class="detail-item">
+                <h3>VVIP MEETING</h3>
+                <p>Встреча в аэропорту, помощь с багажом и приоритетный трансфер.</p>
+            </div>
+            <div class="detail-item">
+                <h3>PROFESSIONAL DRIVER</h3>
+                <p>Опытные водители, знающие лучшие маршруты Майами.</p>
+            </div>
+        </div>
+
+        <div class="price-tag">
+            <span>$6,800</span> / WEEKEND
+        </div>
+
+        <a href="https://wa.me/17862131103" class="cta-button">Забронировать в WhatsApp</a>
     </div>
+</div>
+
+<footer>
+    &copy; 2026 ONYX EXECUTIVE MIAMI. ALL RIGHTS RESERVED.
+</footer>
+
 </body>
 </html>
