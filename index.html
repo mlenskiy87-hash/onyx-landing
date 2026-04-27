@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONYX EXECUTIVE MIAMI | Black Car Service</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <title>ONYX EXECUTIVE MIAMI</title>
     <style>
-        body { margin: 0; padding: 0; background-color: #000; color: #fff; font-family: 'Inter', sans-serif; }
-        
-        /* Твой оригинальный главный блок */
+        /* Базовые настройки, чтобы ничего не плыло */
+        body { margin: 0; padding: 0; background: #000; color: #fff; font-family: sans-serif; }
+
+        /* Главный блок с ТВОИМ ФОТО */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                        url('https://static.wixstatic.com/media/ad4b16_8b89e830e07342898b3f27163f58e478~mv2.jpg');
+                        url('car.jpg'); /* ТВОЁ ФОТО С КОМПЬЮТЕРА */
             background-size: cover;
             background-position: center;
             display: flex;
@@ -22,72 +22,48 @@
             text-align: center;
         }
 
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin: 0; color: #fff; letter-spacing: 2px; }
-        .hero p { font-size: 1.2rem; letter-spacing: 4px; text-transform: uppercase; margin-top: 10px; }
+        h1 { font-size: 3.5rem; text-transform: uppercase; letter-spacing: 5px; color: #d4af37; margin: 0; }
 
-        /* Твои плашки под заголовком */
-        .features { display: flex; gap: 20px; margin-top: 30px; }
-        .feature-item { border: 1px solid rgba(255,255,255,0.3); padding: 10px 20px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+        /* Твои таблички с надписями */
+        .badges { display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap; justify-content: center; }
+        .badge { border: 1px solid #d4af37; padding: 10px 20px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
 
-        /* Новые тарифы без цен */
-        .pricing-section { padding: 80px 20px; background: #000; text-align: center; }
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        
-        .price-card { background: #0a0a0a; border: 1px solid #1a1a1a; padding: 40px; transition: 0.3s; }
-        .price-card:hover { border-color: #d4af37; }
-        .price-card h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 20px; }
-        .price-card .format { display: block; margin-bottom: 30px; color: #888; font-weight: bold; text-transform: uppercase; }
-
-        .cta-btn { 
-            display: inline-block; 
-            padding: 15px 35px; 
-            background: transparent; 
-            color: #fff; 
-            border: 1px solid #fff; 
-            text-decoration: none; 
-            text-transform: uppercase; 
-            font-size: 0.9rem; 
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
-        .cta-btn:hover { background: #fff; color: #000; }
+        /* Новые карточки тарифов (без цен) */
+        .services { padding: 60px 20px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; max-width: 1200px; margin: 0 auto; }
+        .card { background: #111; border: 1px solid #222; padding: 30px; width: 300px; text-align: center; border-radius: 10px; }
+        .card h3 { color: #d4af37; margin-top: 0; }
+        .btn { display: inline-block; margin-top: 20px; padding: 12px 25px; background: #d4af37; color: #000; text-decoration: none; font-weight: bold; border-radius: 5px; }
     </style>
 </head>
 <body>
 
-    <div class="hero">
-        <h1>ONYX EXECUTIVE</h1>
-        <p>Miami Black Car Service</p>
-        <div class="features">
-            <div class="feature-item">Suburban RST</div>
-            <div class="feature-item">Professional Chauffeur</div>
-            <div class="feature-item">24/7 Service</div>
+    <header class="hero">
+        <h1>Onyx Executive</h1>
+        <div class="badges">
+            <div class="badge">Professional Chauffeur</div>
+            <div class="badge">Luxury Suburban RST</div>
+            <div class="badge">Miami Area</div>
         </div>
-        <a href="https://wa.me/3108579240" class="cta-btn" style="margin-top: 50px; border-color: #d4af37; color: #d4af37;">Book via WhatsApp</a>
-    </div>
+        <a href="https://wa.me/3108579240" class="btn">WhatsApp Booking</a>
+    </header>
 
-    <div class="pricing-section">
-        <div class="pricing-grid">
-            <div class="price-card">
-                <h3>Hourly Service</h3>
-                <span class="format">Flexible Booking</span>
-                <p>Perfect for corporate meetings and city transfers.</p>
-                <a href="https://wa.me/3108579240" class="cta-btn">Inquire</a>
-            </div>
-            <div class="price-card" style="border-color: #d4af37;">
-                <h3>Full Day</h3>
-                <span class="format">Premium Experience</span>
-                <p>A dedicated chauffeur at your disposal all day long.</p>
-                <a href="https://wa.me/3108579240" class="cta-btn" style="background: #d4af37; border-color: #d4af37; color: #000;">Book Now</a>
-            </div>
-            <div class="price-card">
-                <h3>Weekend</h3>
-                <span class="format">Special Events</span>
-                <p>Tailored service for Race Weekend and long stays.</p>
-                <a href="https://wa.me/3108579240" class="cta-btn">Get a Quote</a>
-            </div>
+    <section class="services">
+        <div class="card">
+            <h3>Hourly</h3>
+            <p>Format: By Hour</p>
+            <a href="https://wa.me/3108579240" class="btn">Inquire</a>
         </div>
-    </div>
+        <div class="card" style="border-color: #d4af37;">
+            <h3>Daily</h3>
+            <p>Format: Full Day</p>
+            <a href="https://wa.me/3108579240" class="btn">Book Now</a>
+        </div>
+        <div class="card">
+            <h3>Weekend</h3>
+            <p>Format: Weekend Package</p>
+            <a href="https://wa.me/3108579240" class="btn">Get a Quote</a>
+        </div>
+    </section>
 
 </body>
 </html>
