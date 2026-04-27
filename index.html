@@ -3,228 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONYX EXECUTIVE MIAMI | VIP Chauffeur Service</title>
+    <title>ONYX EXECUTIVE MIAMI | Premium Black Car Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --gold: #d4af37;
-            --soft-white: #e0e0e0;
-            --bg-dark: #0a0a0a;
-            --card-bg: #161616;
-        }
-
         body {
-            background-color: var(--bg-dark);
-            color: var(--soft-white);
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #050505;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
         }
 
-        .header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('car.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 70vh;
+        /* Шапка */
+        header {
+            height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            border-bottom: 3px solid var(--gold);
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1920'); /* Временный фон с авто */
+            background-size: cover;
+            background-position: center;
         }
 
-        .logo {
-            font-size: clamp(3rem, 10vw, 5rem);
-            font-weight: 900;
-            letter-spacing: 15px;
-            color: #fff;
-            margin: 0;
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: 5px;
             text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #d4af37;
         }
 
         .subtitle {
-            font-size: 1rem;
-            color: var(--gold);
-            letter-spacing: 5px;
-            margin-top: 20px;
-            text-transform: uppercase;
-            font-weight: 300;
-        }
-
-        .content {
-            max-width: 1100px;
-            margin: -50px auto 50px;
-            padding: 0 25px;
-            text-align: center;
-            position: relative;
-            z-index: 10;
-        }
-
-        .intro-card {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid #252525;
-            margin-bottom: 60px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            color: #fff;
-            letter-spacing: 3px;
-            margin: 40px 0 30px;
-            text-transform: uppercase;
-        }
-
-        .details-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 50px;
-        }
-
-        .detail-item {
-            background: var(--card-bg);
-            padding: 35px 25px;
-            border-radius: 20px;
-            border: 1px solid #252525;
-            transition: 0.3s;
-        }
-
-        .detail-item h3 {
-            color: var(--gold);
-            margin-top: 0;
-            letter-spacing: 2px;
             font-size: 1.2rem;
-        }
-
-        .pricing-container {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-            margin: 40px 0;
-        }
-
-        .price-card {
-            background: #1a1a1a;
-            padding: 40px;
-            border-radius: 25px;
-            border: 1px solid #333;
-            min-width: 280px;
-            flex: 1;
-            max-width: 350px;
-        }
-
-        .price-card.featured {
-            border: 2px solid var(--gold);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
-        }
-
-        .price-val {
-            font-size: 3.5rem;
-            color: #fff;
-            font-weight: 800;
-            display: block;
-        }
-
-        .price-val span { font-size: 1.2rem; color: var(--gold); margin-right: 5px; }
-
-        .cta-button {
-            display: inline-block;
-            background: var(--gold);
-            color: #000;
-            padding: 20px 50px;
-            text-decoration: none;
-            font-weight: 900;
-            border-radius: 50px;
             text-transform: uppercase;
-            font-size: 1.1rem;
-            transition: 0.3s;
-            margin: 30px 0;
-            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+            letter-spacing: 3px;
+            margin-bottom: 30px;
         }
 
-        .cta-button:hover {
-            background: #fff;
-            transform: translateY(-3px);
+        /* Секция тарифов */
+        .services {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .social-link {
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 50px 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .card:hover {
+            border-color: #d4af37;
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .card.featured {
+            border-color: #d4af37;
+            transform: scale(1.05);
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #888;
+            margin-bottom: 30px;
+            height: 50px;
+        }
+
+        .format {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffffff;
+            margin-bottom: 30px;
             display: block;
-            margin-top: 20px;
-            color: var(--soft-white);
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: 0.3s;
         }
 
-        .social-link:hover {
-            color: var(--gold);
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #d4af37;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #f1cf6d;
         }
 
         footer {
-            padding: 60px 20px;
+            padding: 50px;
             text-align: center;
-            font-size: 0.85rem;
-            color: #666;
-            border-top: 1px solid #222;
+            font-size: 0.8rem;
+            color: #444;
+            border-top: 1px solid #111;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .card.featured { transform: scale(1); }
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1 class="logo">ONYX</h1>
-        <p class="subtitle">Luxury Transportation | Miami 2026</p>
-    </div>
+    <header>
+        <h1>Onyx Executive</h1>
+        <div class="subtitle">Miami Premium Chauffeur Service</div>
+        <a href="https://wa.me/3108579240" class="btn">Contact via WhatsApp</a>
+    </header>
 
-    <div class="content">
-        <div class="intro-card">
-            <h2>Premium Chauffeur & Concierge</h2>
-            <p>Elite fleet and professional service tailored for the 2026 Miami Race Weekend. Experience seamless luxury from the moment you land.</p>
+    <section class="services">
+        <h2 class="section-title">Our Rates</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <h3>Hourly</h3>
+                <p>Perfect for business meetings and city errands with a private chauffeur.</p>
+                <span class="format">Format: Per Hour</span>
+                <a href="https://wa.me/3108579240" class="btn">Inquire</a>
+            </div>
+
+            <div class="card featured">
+                <h3>Daily</h3>
+                <p>Your dedicated premium SUV for the whole day. Ultimate freedom.</p>
+                <span class="format">Format: Full Day</span>
+                <a href="https://wa.me/3108579240" class="btn">Book Now</a>
+            </div>
+
+            <div class="card">
+                <h3>Weekend</h3>
+                <p>Exclusive rates for your Miami stay or special events.</p>
+                <span class="format">Format: Weekend Package</span>
+                <a href="https://wa.me/3108579240" class="btn">Get a Quote</a>
+            </div>
+
         </div>
-
-        <div class="details-grid">
-            <div class="detail-item">
-                <h3>VVIP AIRPORT</h3>
-                <p>Exclusive Meet & Greet service at MIA or OPF. Direct tarmac or gate pickup.</p>
-            </div>
-            <div class="detail-item">
-                <h3>RACE WEEKEND</h3>
-                <p>Skip the traffic. Our drivers know the exclusive routes to the paddock and VIP zones.</p>
-            </div>
-            <div class="detail-item">
-                <h3>24/7 SERVICE</h3>
-                <p>Your vehicle is ready whenever you are. Just one message away.</p>
-            </div>
-        </div>
-
-        <h2>Select Your Plan</h2>
-        <div class="pricing-container">
-            <div class="price-card">
-                <span class="price-val"><span>$</span>1,200</span>
-                <p style="letter-spacing: 2px;">DAILY RATE</p>
-            </div>
-            <div class="price-card featured">
-                <span class="price-val"><span>$</span>6,800</span>
-                <p style="letter-spacing: 2px; font-weight: bold;">FULL WEEKEND</p>
-                <small style="color: var(--gold); text-transform: uppercase; font-weight: bold;">Best Luxury Value</small>
-            </div>
-        </div>
-
-        <a href="https://wa.me/13108579240" class="cta-button">Book on WhatsApp</a>
-        
-        <a href="https://www.instagram.com/onyxexecmiami" class="social-link" target="_blank">
-            📸 Instagram: @onyxexecmiami
-        </a>
-    </div>
+    </section>
 
     <footer>
-        &copy; 2026 ONYX EXECUTIVE MIAMI. ALL RIGHTS RESERVED.<br>
-        Miami Grand Prix Weekend Luxury Logistics.
+        &copy; 2026 ONYX EXECUTIVE MIAMI. ALL RIGHTS RESERVED.
     </footer>
 
 </body>
