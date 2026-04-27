@@ -8,7 +8,7 @@
     <style>
         body { margin: 0; padding: 0; background: #000; color: #fff; font-family: 'Inter', sans-serif; }
 
-        /* Твой Suburban с компьютера */
+        /* Главный экран */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
@@ -17,29 +17,33 @@
             background-position: center;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* Подняли контент вверх */
             align-items: center;
             text-align: center;
+            padding-top: 15vh; /* Отступ от самого верха */
         }
 
-        /* Тот самый шрифт для заголовка */
         h1 { font-family: 'Playfair Display', serif; font-size: 4rem; text-transform: uppercase; letter-spacing: 5px; color: #d4af37; margin: 0; }
         
-        .badges { display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap; justify-content: center; }
-        .badge { border: 1px solid rgba(212, 175, 55, 0.5); padding: 10px 20px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; background: rgba(0,0,0,0.3); }
+        /* Таблички теперь сразу под заголовком */
+        .badges { display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap; justify-content: center; }
+        .badge { border: 1px solid rgba(212, 175, 55, 0.6); padding: 8px 18px; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; background: rgba(0,0,0,0.5); }
 
-        .services { padding: 80px 20px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; max-width: 1200px; margin: 0 auto; }
-        .card { background: #0a0a0a; border: 1px solid #1a1a1a; padding: 40px; width: 300px; text-align: center; border-radius: 5px; transition: 0.3s; }
-        .card:hover { border-color: #d4af37; }
-        .card h3 { font-family: 'Playfair Display', serif; color: #d4af37; font-size: 1.8rem; margin-top: 0; }
-        
-        .btn { display: inline-block; margin-top: 20px; padding: 12px 30px; border: 1px solid #d4af37; color: #d4af37; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; transition: 0.3s; }
-        .btn:hover { background: #d4af37; color: #000; }
+        /* Кнопка WhatsApp */
+        .main-btn { display: inline-block; margin-top: 35px; padding: 15px 40px; background: #d4af37; color: #000; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; border-radius: 2px; transition: 0.3s; }
+        .main-btn:hover { background: #fff; }
 
-        /* Блок Instagram */
-        .social-link { margin-top: 30px; color: #fff; text-decoration: none; font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #d4af37; padding-bottom: 5px; }
+        /* Ссылка на Instagram */
+        .insta-link { margin-top: 25px; color: #fff; text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #d4af37; padding-bottom: 3px; opacity: 0.8; }
+        .insta-link:hover { opacity: 1; }
+
+        /* Секция тарифов */
+        .services { padding: 60px 20px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; max-width: 1200px; margin: 0 auto; background: #000; }
+        .card { background: #0a0a0a; border: 1px solid #1a1a1a; padding: 30px; width: 280px; text-align: center; border-radius: 5px; }
+        .card h3 { font-family: 'Playfair Display', serif; color: #d4af37; font-size: 1.5rem; margin-top: 0; }
+        .card p { color: #888; font-size: 0.9rem; margin-bottom: 20px; }
         
-        footer { padding: 60px; text-align: center; border-top: 1px solid #111; }
+        .sub-btn { display: inline-block; padding: 10px 20px; border: 1px solid #d4af37; color: #d4af37; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; }
     </style>
 </head>
 <body>
@@ -51,32 +55,29 @@
             <div class="badge">Suburban RST</div>
             <div class="badge">Miami Area</div>
         </div>
-        <a href="https://wa.me/3108579240" class="btn" style="background: #d4af37; color: #000;">Book via WhatsApp</a>
-        <a href="https://www.instagram.com/onyx_exec_miami/" target="_blank" class="social-link" style="margin-top: 40px;">Follow on Instagram</a>
+        
+        <a href="https://wa.me/3108579240" class="main-btn">Book via WhatsApp</a>
+        
+        <a href="https://www.instagram.com/onyxexecmiami?igsh=MTcwMjZyeGE0bTRvaw==" target="_blank" class="insta-link">Follow @onyxexecmiami</a>
     </header>
 
     <section class="services">
         <div class="card">
             <h3>Hourly</h3>
-            <p style="color: #888;">Format: By Hour</p>
-            <a href="https://wa.me/3108579240" class="btn">Inquire</a>
+            <p>Flexible for business & city</p>
+            <a href="https://wa.me/3108579240" class="sub-btn">Inquire</a>
         </div>
         <div class="card" style="border-color: #d4af37;">
             <h3>Full Day</h3>
-            <p style="color: #888;">Format: Daily Rate</p>
-            <a href="https://wa.me/3108579240" class="btn">Book Now</a>
+            <p>Ultimate freedom in Miami</p>
+            <a href="https://wa.me/3108579240" class="sub-btn" style="background: #d4af37; color: #000;">Book Now</a>
         </div>
         <div class="card">
             <h3>Weekend</h3>
-            <p style="color: #888;">Format: Weekend</p>
-            <a href="https://wa.me/3108579240" class="btn">Get a Quote</a>
+            <p>Special Race Weekend rates</p>
+            <a href="https://wa.me/3108579240" class="sub-btn">Get a Quote</a>
         </div>
     </section>
-
-    <footer>
-        <a href="https://www.instagram.com/onyx_exec_miami/" target="_blank" style="color: #d4af37; text-decoration: none; font-weight: bold;">@ONYX_EXEC_MIAMI</a>
-        <p style="color: #444; margin-top: 20px;">&copy; 2026 ONYX EXECUTIVE MIAMI</p>
-    </footer>
 
 </body>
 </html>
